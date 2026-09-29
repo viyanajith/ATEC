@@ -16,13 +16,14 @@ Same setup as Boolean Quest's `~/booleanquestGIT`.
 
 ## How to rebuild the game files
 
+The build scripts live with the game, in `~/mc-clone-3d/tools/` (same recipe as Boolean Quest's):
 ```
-G=~/Downloads/Godot.app/Contents/MacOS/Godot
-$G --headless --path ~/mc-clone-3d --export-release "macOS" ~/CivASEC_repo/download_files/CivilizationATEC.dmg
-$G --headless --path ~/mc-clone-3d --export-release "Windows Desktop" ~/CivASEC_repo/download_files/CivilizationATEC.exe
+~/mc-clone-3d/tools/make_fancy_dmg.sh     # Mac installer: drag-to-Applications window, wallpaper, app icon
+~/mc-clone-3d/tools/make_windows_exe.sh   # Windows: one .exe with the icon on it
+~/mc-clone-3d/tools/make_icons.sh         # only after changing app_icon.html or dmg_background.html
 ```
-Bump `config/version` in `mc-clone-3d/project.godot` (shown on the Create World screen) and the
-versions in `mc-clone-3d/export_presets.cfg` first.
+Both deliver into `download_files/`. Bump `config/version` in `mc-clone-3d/project.godot` (shown on
+the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` first.
 
 ## Releasing a new version
 
