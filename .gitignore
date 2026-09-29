@@ -1,0 +1,4 @@
+# the game files are too big for git (GitHub refuses over 100 MB); they go on GitHub Releases
+*.dmg
+*.exe
+.DS_Store
