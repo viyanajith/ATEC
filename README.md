@@ -1,17 +1,19 @@
-# 🌲 Civilization ASEC
+# 🌲 Civilization ATEC
+
+*Advanced Technological Electrical Civilization*
 
 From the first log to the stars. Punch a tree, smelt iron, wire up solar panels, build a drill and tunnel through the world. This is the start of a very long road that ends on Mars and around a Dyson Sphere.
 
-**Website:** https://viyanajith.github.io/CivASEC/
+**Website:** https://viyanajith.github.io/CivATEC/
 
 ## 📥 Download
 
 **[Download from Releases →](../../releases)**
 
-- **Mac:** `CivilizationASEC.dmg` (Apple Silicon & Intel)
-- **Windows:** `CivilizationASEC.exe` (64-bit)
+- **Mac:** `CivilizationATEC.dmg` (Apple Silicon & Intel)
+- **Windows:** `CivilizationATEC.exe` (64-bit)
 
-> **First time opening on Mac:** open the DMG and drag Civilization ASEC into Applications.
+> **First time opening on Mac:** open the DMG and drag Civilization ATEC into Applications.
 > Open it once; macOS says it "could be malware". That's what it says about every indie game
 > without Apple's $99 badge, not a real problem. Go to **System Settings → Privacy & Security**,
 > scroll to the bottom and click **Open Anyway**. After that it opens normally, forever.
