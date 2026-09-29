@@ -255,7 +255,10 @@
 
   function show(tag) {
     const v = VERSIONS.find(x => x.tag === tag) || VERSIONS[0];
-    const base = `${REPO}/releases/download/${v.tag}/`;
+    // opened from this computer (not the website): the newest version's buttons use the
+    // freshly built files in download_files/ next to docs/
+    const local = location.protocol === "file:" && v === VERSIONS[0];
+    const base = local ? "../download_files/" : `${REPO}/releases/download/${v.tag}/`;
     document.getElementById("mac").href = base + "CivilizationATEC.dmg";
     document.getElementById("win").href = base + "CivilizationATEC.exe";
     document.getElementById("mac-size").textContent = `free · ${v.mac} · Apple Silicon & Intel`;
