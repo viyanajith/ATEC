@@ -66,6 +66,7 @@
   }
   .picker select:focus { outline: 2px solid var(--leaf); outline-offset: 1px; }
   .notes { width: 100%; color: var(--dim); font-size: 14px; }
+  .next { width: 100%; font-size: 13px; color: var(--space); font-family: "Menlo", "Consolas", monospace; }
 
   .download {
     display: inline-block;
@@ -159,6 +160,7 @@
       <label for="version">Version</label>
       <select id="version"></select>
       <p class="notes" id="notes"></p>
+      <p class="next" id="next"></p>
     </div>
 
     <a class="download" id="mac" href="#">
@@ -240,8 +242,9 @@
   // Every release, newest first. A new version = one new line at the top.
   // The files must be attached to the GitHub release with this tag.
   const REPO = "https://github.com/viyanajith/CivATEC";
+  // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
-    { tag: "beta-1.0", name: "Beta 1.0", date: "2026-09-29", mac: "70 MB", win: "112 MB",
+    { tag: "beta-1.0", name: "Beta 1.0", title: "First Debug Release", date: "2026-09-29", mac: "70 MB", win: "112 MB",
       notes: "The first public beta: survival, iron, electricity, solar panels and the drill." },
   ];
 
@@ -249,7 +252,7 @@
   for (const v of VERSIONS) {
     const option = document.createElement("option");
     option.value = v.tag;
-    option.textContent = `${v.name}  ·  ${v.date}`;
+    option.textContent = `${v.name} — ${v.title}  ·  ${v.date}`;
     select.appendChild(option);
   }
 
@@ -264,8 +267,12 @@
     document.getElementById("mac-size").textContent = `free · ${v.mac} · Apple Silicon & Intel`;
     document.getElementById("win-size").textContent = `free · ${v.win} · 64-bit`;
     document.getElementById("notes").textContent = v.notes;
-    document.getElementById("badge").textContent = v.name.toUpperCase();
+    document.getElementById("badge").textContent = `${v.name} · ${v.title}`.toUpperCase();
   }
+
+  // What's being worked on now (not downloadable yet). Empty the name when there is none.
+  const NEXT = { name: "Beta 1.1", title: "Performance Fix", about: "smoother FPS and rendering, a steady 20 TPS" };
+  document.getElementById("next").textContent = NEXT.name ? `Coming next: ${NEXT.name} — ${NEXT.title} (${NEXT.about})` : "";
 
   select.addEventListener("change", () => show(select.value));
   show(VERSIONS[0].tag);

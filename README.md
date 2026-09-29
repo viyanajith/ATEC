@@ -10,6 +10,11 @@ From the first log to the stars. Punch a tree, smelt iron, wire up solar panels,
 
 **[Download from Releases →](../../releases)**
 
+| Version | Name | |
+|---|---|---|
+| Beta 1.0 | First Debug Release | out now |
+| Beta 1.1 | Performance Fix | coming next: smoother FPS and rendering, a steady 20 TPS |
+
 - **Mac:** `CivilizationATEC.dmg` (Apple Silicon & Intel)
 - **Windows:** `CivilizationATEC.exe` (64-bit)
 

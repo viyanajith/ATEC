@@ -30,3 +30,13 @@ the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` fi
 1. Rebuild both files (above).
 2. `gh release create <tag> download_files/CivilizationATEC.dmg download_files/CivilizationATEC.exe --title "Civilization ATEC <name>"`
 3. Add a line at the top of `VERSIONS` in `docs/index.html`, commit, push.
+
+## Versions (every update has a name)
+
+| Version | Name | Status |
+|---|---|---|
+| Beta 1.0 | First Debug Release | out, 2026-09-29 (day 3) |
+| Beta 1.1 | Performance Fix | next: better FPS and rendering, TPS always a steady 20, every trick we can find |
+
+On the website: `title` in each `VERSIONS` entry, and `NEXT` for the version being worked on.
+When a version ships, move it from `NEXT` into `VERSIONS` and give the next one a name.
