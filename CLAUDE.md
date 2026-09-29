@@ -1,6 +1,10 @@
-# Civilization ATEC: publishing folder
+# ATEC: publishing folder
 
-This folder is the PUBLIC face of Civilization ATEC: the download website and the release files.
+ATEC (say it A-TE-K) = Advanced Technological Electrical Civilization. Renamed from
+"Civilization ATEC" on 2026-09-29 because "Civilization" is Take-Two's video-game trademark:
+keep "Civilization" out of the title; the long form as a subtitle is fine.
+
+This folder is the PUBLIC face of ATEC: the download website and the release files.
 The game's source code lives separately in `/Users/viyanajith/mc-clone-3d` (a Godot 4.7 project).
 Same setup as Boolean Quest's `~/booleanquestGIT`.
 
@@ -8,9 +12,9 @@ Same setup as Boolean Quest's `~/booleanquestGIT`.
 
 - `docs/index.html`: the download website (GitHub Pages from `main` / `docs`).
   The `VERSIONS` list in its script fills the version selection bar; each entry's `tag`
-  must be a GitHub release that has `CivilizationATEC.dmg` and `CivilizationATEC.exe` attached.
+  must be a GitHub release that has `ATEC.dmg` and `ATEC.exe` attached.
 - `README.md`: the repo page on GitHub.
-- `download_files/`: the built game (`CivilizationATEC.dmg`, `CivilizationATEC.exe`).
+- `download_files/`: the built game (`ATEC.dmg`, `ATEC.exe`).
   NOT committed (gitignored, too big); attached to GitHub Releases instead.
 - The donate button is Dad's job: its spot is marked `<!-- DONATE BUTTON GOES HERE (Dad) -->`.
 
@@ -28,7 +32,7 @@ the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` fi
 ## Releasing a new version
 
 1. Rebuild both files (above).
-2. `gh release create <tag> download_files/CivilizationATEC.dmg download_files/CivilizationATEC.exe --title "Civilization ATEC <name>"`
+2. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe --title "ATEC <name>"`
 3. Add a line at the top of `VERSIONS` in `docs/index.html`, commit, push.
 
 ## Versions (every update has a name)

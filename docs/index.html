@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Civilization ATEC — from the first log to the stars</title>
+<title>ATEC — from the first log to the stars</title>
 <style>
   :root {
     --bg: #080b0a;
@@ -47,6 +47,7 @@
     font-family: "Menlo", "Consolas", monospace; font-size: 12px;
     letter-spacing: 3px; text-transform: uppercase; color: var(--dim); margin-bottom: 6px;
   }
+  .say { color: var(--dim); font-size: 13px; margin-top: 2px; font-family: "Menlo", "Consolas", monospace; }
   .tagline { color: var(--space); font-size: clamp(16px, 3vw, 20px); margin-top: 12px; }
   .story { color: var(--dim); max-width: 560px; margin: 18px auto 0; }
 
@@ -149,7 +150,8 @@
   <header>
     <span class="logo">🌲</span>
     <p class="longname">Advanced Technological Electrical Civilization</p>
-    <h1>CIVILIZATION ATEC</h1>
+    <h1>ATEC</h1>
+    <p class="say">say it: A-TE-K</p>
     <span class="badge" id="badge">BETA</span>
     <p class="tagline">From the first log to the stars.</p>
     <p class="story">Punch a tree. Smelt iron. Wire up solar panels, build a drill and tunnel
@@ -175,7 +177,7 @@
     <div class="guide">
       <h3>🍎 Mac: first time opening</h3>
       <ol>
-        <li>Open <b>CivilizationATEC.dmg</b> and drag <b>Civilization ATEC</b> into <b>Applications</b>.</li>
+        <li>Open <b>ATEC.dmg</b> and drag <b>ATEC</b> into <b>Applications</b>.</li>
         <li>Open the game once. macOS will say it "could be malware" and block it — that's what it
         says about every indie game without Apple's $99 badge, not a real problem.</li>
         <li>Go to <b>System Settings → Privacy &amp; Security</b>, scroll to the bottom and click
@@ -233,7 +235,7 @@
 
   <footer>
     Made with <a href="https://godotengine.org">Godot 4.7</a> by Viyan ·
-    <a href="https://github.com/viyanajith/CivATEC">Civilization ATEC on GitHub</a>
+    <a href="https://github.com/viyanajith/ATEC">ATEC on GitHub</a>
   </footer>
 
 </div>
@@ -241,7 +243,7 @@
 <script>
   // Every release, newest first. A new version = one new line at the top.
   // The files must be attached to the GitHub release with this tag.
-  const REPO = "https://github.com/viyanajith/CivATEC";
+  const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
     { tag: "beta-1.0", name: "Beta 1.0", title: "First Debug Release", date: "2026-09-29", mac: "70 MB", win: "112 MB",
@@ -262,8 +264,8 @@
     // freshly built files in download_files/ next to docs/
     const local = location.protocol === "file:" && v === VERSIONS[0];
     const base = local ? "../download_files/" : `${REPO}/releases/download/${v.tag}/`;
-    document.getElementById("mac").href = base + "CivilizationATEC.dmg";
-    document.getElementById("win").href = base + "CivilizationATEC.exe";
+    document.getElementById("mac").href = base + "ATEC.dmg";
+    document.getElementById("win").href = base + "ATEC.exe";
     document.getElementById("mac-size").textContent = `free · ${v.mac} · Apple Silicon & Intel`;
     document.getElementById("win-size").textContent = `free · ${v.win} · 64-bit`;
     document.getElementById("notes").textContent = v.notes;
