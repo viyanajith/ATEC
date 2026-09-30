@@ -12,8 +12,10 @@ From the first log to the stars. Punch a tree, smelt iron, wire up solar panels,
 
 | Version | Name | |
 |---|---|---|
-| Beta 1.0 | First Debug Release | out now |
-| Beta 1.1 | Performance Fix | coming next: smoother FPS and rendering, a steady 20 TPS |
+| Beta 1.1 | Performance Fix | out now: steady 60 FPS, levels of detail, settings menu, death screen |
+| Beta 1.0 | First Debug Release | 2026-09-29 |
+| Beta 1.3 | Saving & Loading | coming |
+| Beta 1.4 | Sounds | coming |
 
 - **Mac:** `ATEC.dmg` (Apple Silicon & Intel)
 - **Windows:** `ATEC.exe` (64-bit)

@@ -40,7 +40,10 @@ the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` fi
 | Version | Name | Status |
 |---|---|---|
 | Beta 1.0 | First Debug Release | out, 2026-09-29 (day 3) |
-| Beta 1.1 | Performance Fix | next: better FPS and rendering, TPS always a steady 20, every trick we can find |
+| Beta 1.1 | Performance Fix | out, 2026-09-30: worker-thread meshing, 5 LOD levels, simple shadows, AO, settings menu, death screen, clock |
+| Beta 1.2 | (not named yet) | |
+| Beta 1.3 | Saving & Loading | planned |
+| Beta 1.4 | Sounds | planned |
 
 On the website: `title` in each `VERSIONS` entry, and `NEXT` for the version being worked on.
 When a version ships, move it from `NEXT` into `VERSIONS` and give the next one a name.

@@ -246,6 +246,8 @@
   const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
+    { tag: "beta-1.1", name: "Beta 1.1", title: "Performance Fix", date: "2026-09-30", mac: "70 MB", win: "112 MB",
+      notes: "Steady 60 FPS: chunks build on worker threads, 5 levels of detail, simpler shadows, smooth corner lighting. Plus a pause menu with settings and key rebinding, a death screen, a clock, and you can jump out of water." },
     { tag: "beta-1.0", name: "Beta 1.0", title: "First Debug Release", date: "2026-09-29", mac: "70 MB", win: "112 MB",
       notes: "The first public beta: survival, iron, electricity, solar panels and the drill." },
   ];
@@ -273,7 +275,7 @@
   }
 
   // What's being worked on now (not downloadable yet). Empty the name when there is none.
-  const NEXT = { name: "Beta 1.1", title: "Performance Fix", about: "smoother FPS and rendering, a steady 20 TPS" };
+  const NEXT = { name: "Beta 1.3", title: "Saving & Loading", about: "worlds that stay; Beta 1.4 brings sounds" };
   document.getElementById("next").textContent = NEXT.name ? `Coming next: ${NEXT.name} — ${NEXT.title} (${NEXT.about})` : "";
 
   select.addEventListener("change", () => show(select.value));
