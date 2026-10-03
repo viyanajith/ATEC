@@ -246,6 +246,8 @@
   const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
+    { tag: "beta-1.3", name: "Beta 1.3", title: "Sounds", date: "2026-10-03", mac: "71 MB", win: "112 MB",
+      notes: "The world makes noise: footsteps on grass, stone and wood, the same sounds while mining, sheep and chickens calling now and then, and a lion that roars when it attacks. Plus a sound volume slider in Settings and a Credits page in the pause menu." },
     { tag: "beta-1.2", name: "Beta 1.2", title: "Saving & Loading", date: "2026-10-01", mac: "70 MB", win: "112 MB",
       notes: "Your worlds are saved: up to 5 of them, tiny binary saves (a fresh world is about 260 bytes). Blocks, inventory, chests, furnaces, you, mobs, dropped items, time and objectives all come back. Plus a fixed tick order, /tick freeze|step|rate, and no more see-through walls underground." },
     { tag: "beta-1.1", name: "Beta 1.1", title: "Performance Fix", date: "2026-09-30", mac: "70 MB", win: "112 MB",
@@ -277,7 +279,7 @@
   }
 
   // What's being worked on now (not downloadable yet). Empty the name when there is none.
-  const NEXT = { name: "Beta 1.3", title: "coming soon", about: "and Beta 1.4 brings sounds" };
+  const NEXT = { name: "Beta 1.4", title: "coming soon", about: "a new idea is on the way" };
   document.getElementById("next").textContent = NEXT.name ? `Coming next: ${NEXT.name} — ${NEXT.title} (${NEXT.about})` : "";
 
   select.addEventListener("change", () => show(select.value));
