@@ -43,7 +43,8 @@ the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` fi
 | Beta 1.1 | Performance Fix | out, 2026-09-30: worker-thread meshing, 5 LOD levels, simple shadows, AO, settings menu, death screen, clock |
 | Beta 1.2 | Saving & Loading | out, 2026-10-01: 5 worlds, binary saves (blocks diff/whole, items, entities, state), tick order, /tick |
 | Beta 1.3 | Sounds | out, 2026-10-03: footsteps + mining sounds (data/sounds/walking.json), mob sounds, volume slider, credits page |
-| Beta 1.4 | (not named yet) | next |
+| Beta 1.4 | Terrain | out, 2026-10-04: height limit 70 (was 35), Generation Order, natural structures: Hill, Mountain, River; Large Ocean biome |
+| Beta 1.5 | (not named yet) | next |
 
 On the website: `title` in each `VERSIONS` entry, and `NEXT` for the version being worked on.
 When a version ships, move it from `NEXT` into `VERSIONS` and give the next one a name.

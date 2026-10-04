@@ -246,6 +246,8 @@
   const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
+    { tag: "beta-1.4", name: "Beta 1.4", title: "Terrain", date: "2026-10-04", mac: "71 MB", win: "112 MB",
+      notes: "New land to explore: the sky limit goes up from 35 to 70, and the world gets its first natural structures. Rolling hills, huge mountains with bare stone peaks (more than half reach the sky limit, and more iron hides under them), and long, wide rivers that wind across the land and cut gorges through hills and mountains. Plus Large Oceans: about 15x bigger than seas, and much deeper. Older worlds still open, but their land is made with the new terrain, so things you built may look different." },
     { tag: "beta-1.3", name: "Beta 1.3", title: "Sounds", date: "2026-10-03", mac: "71 MB", win: "112 MB",
       notes: "The world makes noise: footsteps on grass, stone and wood, the same sounds while mining, sheep and chickens calling now and then, and a lion that roars when it attacks. Plus a sound volume slider in Settings and a Credits page in the pause menu." },
     { tag: "beta-1.2", name: "Beta 1.2", title: "Saving & Loading", date: "2026-10-01", mac: "70 MB", win: "112 MB",
@@ -279,7 +281,7 @@
   }
 
   // What's being worked on now (not downloadable yet). Empty the name when there is none.
-  const NEXT = { name: "Beta 1.4", title: "coming soon", about: "a new idea is on the way" };
+  const NEXT = { name: "Beta 1.5", title: "coming soon", about: "a new idea is on the way" };
   document.getElementById("next").textContent = NEXT.name ? `Coming next: ${NEXT.name} — ${NEXT.title} (${NEXT.about})` : "";
 
   select.addEventListener("change", () => show(select.value));
