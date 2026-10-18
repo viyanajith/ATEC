@@ -12,12 +12,13 @@ From the first log to the stars. Punch a tree, smelt iron, wire up solar panels,
 
 | Version | Name | |
 |---|---|---|
-| Beta 1.4 | Terrain | out now: sky limit 70, hills, huge mountains, long rivers, large oceans |
+| Beta 1.5 | Food Release | out now: farming, bread, the Grinder, Electric Oven, Harvester, Smart Porter, buckets, breeding |
+| Beta 1.4 | Terrain | out: sky limit 70, hills, huge mountains, long rivers, large oceans |
 | Beta 1.3 | Sounds | out: footsteps, mining sounds, sheep/chicken/lion sounds, volume slider, credits |
 | Beta 1.2 | Saving & Loading | out: 5 saved worlds, tiny binary saves, tick order, /tick |
 | Beta 1.1 | Performance Fix | 2026-09-30 |
 | Beta 1.0 | First Debug Release | 2026-09-29 |
-| Beta 1.5 | (not named yet) | coming |
+| Beta 1.6 | (not named yet) | coming |
 
 - **Mac:** `ATEC.dmg` (Apple Silicon & Intel)
 - **Windows:** `ATEC.exe` (64-bit)
@@ -36,6 +37,8 @@ From the first log to the stars. Punch a tree, smelt iron, wire up solar panels,
 - **Electricity:** silicon, batteries, wire and solar panels (they only work in the sun)
 - **The drill:** gear + pipes + drill head bores a 3×3 tunnel and drags everything glued to it
 - **Glue & machines:** tree resin, glue, hoppers and a mechanical chest that catches what you dig
+- **Farming & food:** seeds from tall grass, hoe dirt by water, wheat and carrots, buckets, breeding sheep and chickens
+- **Bread factories:** the Grinder, fire and the Electric Oven, Harvesters and Smart Porters: build a bread maker that runs by itself
 - **Explore:** plains, forests, seas and huge large oceans; hills, mountains that touch the sky and long rivers
 - **Seeds:** every world comes from a seed; turn Cheats on when creating a world for `/` commands
 
