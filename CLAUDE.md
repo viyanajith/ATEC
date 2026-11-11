@@ -29,6 +29,16 @@ The build scripts live with the game, in `~/mc-clone-3d/tools/` (same recipe as 
 Both deliver into `download_files/`. Bump `config/version` in `mc-clone-3d/project.godot` (shown on
 the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` first.
 
+## The browser version (`docs/play/`)
+
+A Godot Web export (preset "Web", threads OFF: GitHub Pages can't send the cross-origin
+headers a threaded build needs), behind the "▶ Play in your browser" button. To rebuild (user, 2026-11-11):
+1. In `mc-clone-3d/project.godot`, under `[rendering]`, set `renderer/rendering_method` (and `.mobile`)
+   to `"gl_compatibility"`.
+2. `Godot --headless --path ~/mc-clone-3d --export-release "Web" ~/CivASEC_repo/docs/play/index.html`
+3. Put the project BACK to Forward+ (remove those lines again).
+In the browser the render distance starts at 5 instead of 10 (`world.gd` WEB_RENDER_DISTANCE), because it lagged.
+
 ## Releasing a new version
 
 1. Rebuild both files (above).
