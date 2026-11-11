@@ -91,6 +91,14 @@
     margin-left: 14px;
   }
   .download.win:hover { box-shadow: 0 0 46px #6ab8ff88, 0 6px 0 #1f4f7a; }
+  /* the browser version (play/, a Godot Web export in Compatibility mode) */
+  .playrow { margin-top: 4px; }
+  .download.play {
+    background: linear-gradient(180deg, var(--copper), #b8693a);
+    box-shadow: 0 0 32px #e39a5a55, 0 4px 0 #6e3a1c;
+    margin-top: 18px;
+  }
+  .download.play:hover { box-shadow: 0 0 46px #e39a5a88, 0 6px 0 #6e3a1c; }
   @media (max-width: 560px) {
     .download { display: block; margin-left: 0 !important; }
   }
@@ -172,6 +180,12 @@
       ⬇ Download for Windows
       <small id="win-size">free</small>
     </a>
+    <div class="playrow">
+      <a class="download play" href="play/">
+        ▶ Play in your browser
+        <small>Beta 1.6 · no download · lighter graphics</small>
+      </a>
+    </div>
     <!-- DONATE BUTTON GOES HERE (Dad) -->
 
     <div class="guide">
