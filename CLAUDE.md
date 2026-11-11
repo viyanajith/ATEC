@@ -45,7 +45,8 @@ the Create World screen) and the versions in `mc-clone-3d/export_presets.cfg` fi
 | Beta 1.3 | Sounds | out, 2026-10-03: footsteps + mining sounds (data/sounds/walking.json), mob sounds, volume slider, credits page |
 | Beta 1.4 | Terrain | out, 2026-10-04: height limit 70 (was 35), Generation Order, natural structures: Hill, Mountain, River; Large Ocean biome |
 | Beta 1.5 | Food Release | out, 2026-10-18: tall grass + seeds, hoe dirt, wheat/carrots, grinder, raw bread, electric oven + fire, harvester, smart porter, steady porters, bucket, breeding, ash, objectives on/off |
-| Beta 1.6 | (not named yet) | next |
+| Beta 1.6 | Adventure Release | out, 2026-11-11: the story (tribe, map, bunker, drill flight, Science Dome, Nick and Palios, Pluto), coal generator, battery in/out sides, nuclear reactor, battery compressor + stacks, reinforced iron, launchpad + engine frame, the probe and the gigacoil, caves, thirst, smoother loading |
+| 1.0 | (not named yet) | next: the first real release; it must start with the newer-save copy check |
 
 On the website: `title` in each `VERSIONS` entry, and `NEXT` for the version being worked on.
 When a version ships, move it from `NEXT` into `VERSIONS` and give the next one a name.
