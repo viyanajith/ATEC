@@ -56,13 +56,10 @@ script's `Input.mouse_mode` goes through it (phones can't lock the mouse). Rebui
 ## Releasing a new version
 
 1. Rebuild both files (above).
-2. Take the game's `.pck` out of the Mac app (the website's only download button is the .pck, user
-   2026-11-12): mount `download_files/ATEC.dmg`, copy `ATEC.app/Contents/Resources/ATEC.pck` to
-   `download_files/ATEC.pck`.
-3. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe download_files/ATEC.pck --title "ATEC <name>"`
-4. Add a line at the top of `VERSIONS` in `docs/index.html` (with its `pck` size), commit, push.
-Players run a .pck with Godot 4.7: `Godot --main-pack ATEC.pck` (without `--main-pack` Godot opens
-its project list instead; the site's "How to play a .pck" guide says so).
+2. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe --title "ATEC <name>"`
+3. Add a line at the top of `VERSIONS` in `docs/index.html`, commit, push.
+(The site had a single ".pck" download button for a while on 2026-11-12; the user turned it back into the
+Mac and Windows buttons the same day. The releases still have an ATEC.pck each, unused.)
 
 ## Versions (every update has a name)
 

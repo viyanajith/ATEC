@@ -99,11 +99,6 @@
     margin-top: 18px;
   }
   .download.play:hover { box-shadow: 0 0 46px #e39a5a88, 0 6px 0 #6e3a1c; }
-  .download.pck { margin-top: 18px; margin-left: 14px; }
-  .guide code { font-family: "Menlo", "Consolas", monospace; font-size: 12px; color: var(--text);
-    background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px;
-    word-break: break-all; }
-  .guide a { color: var(--space); }
   /* the phone version (mobile/, Beta 1.6 recovered from play/ with touch controls added) */
   .download.mobile {
     background: linear-gradient(180deg, #b892ff, #7c55d6);
@@ -186,14 +181,17 @@
       <p class="next" id="next"></p>
     </div>
 
-    <!-- three ways to play (user, 2026-11-12): the browser, a .pck for the chosen version, the phone -->
+    <a class="download" id="mac" href="#">
+      ⬇ Download for Mac
+      <small id="mac-size">free</small>
+    </a><a class="download win" id="win" href="#">
+      ⬇ Download for Windows
+      <small id="win-size">free</small>
+    </a>
     <div class="playrow">
       <a class="download play" href="play/">
         ▶ Play in your browser
         <small>Beta 1.6 · no download · lighter graphics</small>
-      </a><a class="download pck" id="pck" href="#">
-        ⬇ Download .pck
-        <small id="pck-size">free</small>
       </a><a class="download mobile" href="mobile/">
         📱 Play on your phone
         <small>Beta 1.6 · free · touch controls · turn it sideways</small>
@@ -202,21 +200,20 @@
     <!-- DONATE BUTTON GOES HERE (Dad) -->
 
     <div class="guide">
-      <h3>🎮 How to play a .pck</h3>
-      A <b>.pck</b> is the whole game in one small file. It plays on Mac, Windows and Linux with
-      <b>Godot 4.7</b>, a free program (every ATEC version uses Godot 4.7, so you only need it once).
+      <h3>🍎 Mac: first time opening</h3>
       <ol>
-        <li>Get <b>Godot 4.7</b> (the normal one, not .NET) from
-        <a href="https://godotengine.org/download/archive/4.7-stable/">godotengine.org</a>.</li>
-        <li>Download <b>ATEC.pck</b> above (pick the version in the bar first).</li>
-        <li><b>Mac:</b> put Godot in Applications, open <b>Terminal</b> and type:<br>
-        <code>/Applications/Godot.app/Contents/MacOS/Godot --main-pack ~/Downloads/ATEC.pck</code></li>
-        <li><b>Windows:</b> put <b>ATEC.pck</b> in the same folder as the Godot .exe, click the folder's
-        address bar, type <code>cmd</code> and press Enter, then type:<br>
-        <code>Godot_v4.7-stable_win64.exe --main-pack ATEC.pck</code></li>
-        <li><b>Linux:</b> <code>./Godot_v4.7-stable_linux.x86_64 --main-pack ATEC.pck</code></li>
+        <li>Open <b>ATEC.dmg</b> and drag <b>ATEC</b> into <b>Applications</b>.</li>
+        <li>Open the game once. macOS will say it "could be malware" and block it — that's what it
+        says about every indie game without Apple's $99 badge, not a real problem.</li>
+        <li>Go to <b>System Settings → Privacy &amp; Security</b>, scroll to the bottom and click
+        <b>Open Anyway</b>. Your Mac asks for your password (it stays on your Mac).</li>
+        <li>That's it — from now on it opens normally, forever.</li>
       </ol>
-      The <code>--main-pack</code> part matters: without it Godot opens its own project list instead of the game.
+    </div>
+    <div class="guide">
+      <h3>🪟 Windows</h3>
+      If a blue "Windows protected your PC" box appears, click <b>More info → Run anyway</b>.
+      Same reason: no paid badge.
     </div>
   </header>
 
@@ -274,21 +271,21 @@
   const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
-    { tag: "1.0", name: "1.0", title: "First Classic Update", date: "2026-11-12", mac: "72 MB", win: "114 MB", pck: "4.8 MB",
+    { tag: "1.0", name: "1.0", title: "First Classic Update", date: "2026-11-12", mac: "72 MB", win: "114 MB",
       notes: "The first real release of ATEC! It has its own main theme now, a string ensemble where every note slides into the next. Install mods from a .zip or a folder: they can add items, blocks, recipes, commands and code, and change the game's data (the newest installed wins). Texture packs change how blocks and items look, and both have a Make button to start your own. The bottom of the world is unbreakable bedrock, and worlds from a newer ATEC are never damaged by an older one. Don't open 1.0 worlds in the Beta versions." },
-    { tag: "beta-1.6", name: "Beta 1.6", title: "Adventure Release", date: "2026-11-11", mac: "72 MB", win: "114 MB", pck: "4.5 MB",
+    { tag: "beta-1.6", name: "Beta 1.6", title: "Adventure Release", date: "2026-11-11", mac: "72 MB", win: "114 MB",
       notes: "ATEC gets a story. Meet a tribe of survivors and trade them for a map, find the scientists' bunker, fly a drill across the world, fall into the Science Dome and find out where you really are. Then build what it takes to get away: a coal generator, a nuclear reactor, a battery compressor that squeezes 512 batteries into one, reinforced iron and an engine frame on a launchpad... until something falls from the sky. Plus caves, thirst, diving, smoother world loading, and new commands." },
-    { tag: "beta-1.5", name: "Beta 1.5", title: "Food Release", date: "2026-10-18", mac: "71 MB", win: "112 MB", pck: "3.2 MB",
+    { tag: "beta-1.5", name: "Beta 1.5", title: "Food Release", date: "2026-10-18", mac: "71 MB", win: "112 MB",
       notes: "Food, farming and factories. Tall grass gives seeds; hoe grass with a shovel near water, plant wheat and watch it grow, find wild carrots (wash them first!). A Grinder turns wheat into raw bread; bake it in a furnace or the new Electric Oven over a fire. Harvesters, Smart Porters (sorters) and steadier porters let you build a bread maker that runs all by itself. Plus buckets, sheep and chicken breeding, ash fertilizer, live chest screens, and objectives you can switch off." },
-    { tag: "beta-1.4", name: "Beta 1.4", title: "Terrain", date: "2026-10-04", mac: "71 MB", win: "112 MB", pck: "3.1 MB",
+    { tag: "beta-1.4", name: "Beta 1.4", title: "Terrain", date: "2026-10-04", mac: "71 MB", win: "112 MB",
       notes: "New land to explore: the sky limit goes up from 35 to 70, and the world gets its first natural structures. Rolling hills, huge mountains with bare stone peaks (more than half reach the sky limit, and more iron hides under them), and long, wide rivers that wind across the land and cut gorges through hills and mountains. Plus Large Oceans: about 15x bigger than seas, and much deeper. Older worlds still open, but their land is made with the new terrain, so things you built may look different." },
-    { tag: "beta-1.3", name: "Beta 1.3", title: "Sounds", date: "2026-10-03", mac: "71 MB", win: "112 MB", pck: "3.1 MB",
+    { tag: "beta-1.3", name: "Beta 1.3", title: "Sounds", date: "2026-10-03", mac: "71 MB", win: "112 MB",
       notes: "The world makes noise: footsteps on grass, stone and wood, the same sounds while mining, sheep and chickens calling now and then, and a lion that roars when it attacks. Plus a sound volume slider in Settings and a Credits page in the pause menu." },
-    { tag: "beta-1.2", name: "Beta 1.2", title: "Saving & Loading", date: "2026-10-01", mac: "70 MB", win: "112 MB", pck: "2.6 MB",
+    { tag: "beta-1.2", name: "Beta 1.2", title: "Saving & Loading", date: "2026-10-01", mac: "70 MB", win: "112 MB",
       notes: "Your worlds are saved: up to 5 of them, tiny binary saves (a fresh world is about 260 bytes). Blocks, inventory, chests, furnaces, you, mobs, dropped items, time and objectives all come back. Plus a fixed tick order, /tick freeze|step|rate, and no more see-through walls underground." },
-    { tag: "beta-1.1", name: "Beta 1.1", title: "Performance Fix", date: "2026-09-30", mac: "70 MB", win: "112 MB", pck: "2.5 MB",
+    { tag: "beta-1.1", name: "Beta 1.1", title: "Performance Fix", date: "2026-09-30", mac: "70 MB", win: "112 MB",
       notes: "Steady 60 FPS: chunks build on worker threads, 5 levels of detail, simpler shadows, smooth corner lighting. Plus a pause menu with settings and key rebinding, a death screen, a clock, and you can jump out of water." },
-    { tag: "beta-1.0", name: "Beta 1.0", title: "First Debug Release", date: "2026-09-29", mac: "70 MB", win: "112 MB", pck: "2.5 MB",
+    { tag: "beta-1.0", name: "Beta 1.0", title: "First Debug Release", date: "2026-09-29", mac: "70 MB", win: "112 MB",
       notes: "The first public beta: survival, iron, electricity, solar panels and the drill." },
   ];
 
@@ -302,9 +299,14 @@
 
   function show(tag) {
     const v = VERSIONS.find(x => x.tag === tag) || VERSIONS[0];
-    // every release has ATEC.pck next to its .dmg and .exe (only the .pck has a button)
-    document.getElementById("pck").href = `${REPO}/releases/download/${v.tag}/ATEC.pck`;
-    document.getElementById("pck-size").textContent = `${v.name} · free · ${v.pck} · needs Godot 4.7`;
+    // opened from this computer (not the website): the newest version's buttons use the
+    // freshly built files in download_files/ next to docs/
+    const local = location.protocol === "file:" && v === VERSIONS[0];
+    const base = local ? "../download_files/" : `${REPO}/releases/download/${v.tag}/`;
+    document.getElementById("mac").href = base + "ATEC.dmg";
+    document.getElementById("win").href = base + "ATEC.exe";
+    document.getElementById("mac-size").textContent = `free · ${v.mac} · Apple Silicon & Intel`;
+    document.getElementById("win-size").textContent = `free · ${v.win} · 64-bit`;
     document.getElementById("notes").textContent = v.notes;
     document.getElementById("badge").textContent = `${v.name} · ${v.title}`.toUpperCase();
   }
