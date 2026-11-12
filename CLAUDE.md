@@ -38,6 +38,8 @@ headers a threaded build needs), behind the "▶ Play in your browser" button. T
 2. `Godot --headless --path ~/mc-clone-3d --export-release "Web" ~/CivASEC_repo/docs/play/index.html`
 3. Put the project BACK to Forward+ (remove those lines again).
 In the browser the render distance starts at 5 instead of 10 (`world.gd` WEB_RENDER_DISTANCE), because it lagged.
+The browser version is still **Beta 1.6** (user, 2026-11-12): 1.0 was released for Mac and Windows only, so
+`docs/play/` was not rebuilt and its button says Beta 1.6.
 
 ## Releasing a new version
 
@@ -56,7 +58,8 @@ In the browser the render distance starts at 5 instead of 10 (`world.gd` WEB_REN
 | Beta 1.4 | Terrain | out, 2026-10-04: height limit 70 (was 35), Generation Order, natural structures: Hill, Mountain, River; Large Ocean biome |
 | Beta 1.5 | Food Release | out, 2026-10-18: tall grass + seeds, hoe dirt, wheat/carrots, grinder, raw bread, electric oven + fire, harvester, smart porter, steady porters, bucket, breeding, ash, objectives on/off |
 | Beta 1.6 | Adventure Release | out, 2026-11-11: the story (tribe, map, bunker, drill flight, Science Dome, Nick and Palios, Pluto), coal generator, battery in/out sides, nuclear reactor, battery compressor + stacks, reinforced iron, launchpad + engine frame, the probe and the gigacoil, caves, thirst, smoother loading |
-| 1.0 | (not named yet) | next: the first real release; it must start with the newer-save copy check |
+| 1.0 | First Classic Update | out, 2026-11-12: the main theme (music/main_theme.wav, tools/make_ensemble.py), NS (newer-save copy check), mods (zip install, items/blocks, game code, data edits: newest installed wins), texture packs, bedrock floor (chunk format 3) |
+| 2.0 | (not named yet) | next: the login system |
 
 On the website: `title` in each `VERSIONS` entry, and `NEXT` for the version being worked on.
 When a version ships, move it from `NEXT` into `VERSIONS` and give the next one a name.

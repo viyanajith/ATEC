@@ -12,14 +12,15 @@ From the first log to the stars. Punch a tree, smelt iron, wire up solar panels,
 
 | Version | Name | |
 |---|---|---|
-| Beta 1.6 | Adventure Release | out now: the story, the tribe, the Science Dome, the nuclear reactor, the battery compressor, caves, thirst |
+| 1.0 | First Classic Update | out now: the main theme, mods (.zip, items, blocks, code, data edits), texture packs, bedrock, safe worlds (NS) |
+| Beta 1.6 | Adventure Release | out: the story, the tribe, the Science Dome, the nuclear reactor, the battery compressor, caves, thirst |
 | Beta 1.5 | Food Release | out: farming, bread, the Grinder, Electric Oven, Harvester, Smart Porter, buckets, breeding |
 | Beta 1.4 | Terrain | out: sky limit 70, hills, huge mountains, long rivers, large oceans |
 | Beta 1.3 | Sounds | out: footsteps, mining sounds, sheep/chicken/lion sounds, volume slider, credits |
 | Beta 1.2 | Saving & Loading | out: 5 saved worlds, tiny binary saves, tick order, /tick |
 | Beta 1.1 | Performance Fix | 2026-09-30 |
 | Beta 1.0 | First Debug Release | 2026-09-29 |
-| 1.0 | (not named yet) | coming: the first real release |
+| 2.0 | (not named yet) | coming: accounts and logging in |
 
 - **Mac:** `ATEC.dmg` (Apple Silicon & Intel)
 - **Windows:** `ATEC.exe` (64-bit)

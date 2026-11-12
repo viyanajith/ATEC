@@ -260,6 +260,8 @@
   const REPO = "https://github.com/viyanajith/ATEC";
   // Each update has a name (title). A new version = one new line at the top.
   const VERSIONS = [
+    { tag: "1.0", name: "1.0", title: "First Classic Update", date: "2026-11-12", mac: "72 MB", win: "114 MB",
+      notes: "The first real release of ATEC! It has its own main theme now, a string ensemble where every note slides into the next. Install mods from a .zip or a folder: they can add items, blocks, recipes, commands and code, and change the game's data (the newest installed wins). Texture packs change how blocks and items look, and both have a Make button to start your own. The bottom of the world is unbreakable bedrock, and worlds from a newer ATEC are never damaged by an older one. Don't open 1.0 worlds in the Beta versions." },
     { tag: "beta-1.6", name: "Beta 1.6", title: "Adventure Release", date: "2026-11-11", mac: "72 MB", win: "114 MB",
       notes: "ATEC gets a story. Meet a tribe of survivors and trade them for a map, find the scientists' bunker, fly a drill across the world, fall into the Science Dome and find out where you really are. Then build what it takes to get away: a coal generator, a nuclear reactor, a battery compressor that squeezes 512 batteries into one, reinforced iron and an engine frame on a launchpad... until something falls from the sky. Plus caves, thirst, diving, smoother world loading, and new commands." },
     { tag: "beta-1.5", name: "Beta 1.5", title: "Food Release", date: "2026-10-18", mac: "71 MB", win: "112 MB",
@@ -299,7 +301,7 @@
   }
 
   // What's being worked on now (not downloadable yet). Empty the name when there is none.
-  const NEXT = { name: "1.0", title: "coming soon", about: "the first real release" };
+  const NEXT = { name: "2.0", title: "coming soon", about: "accounts and logging in" };
   document.getElementById("next").textContent = NEXT.name ? `Coming next: ${NEXT.name} — ${NEXT.title} (${NEXT.about})` : "";
 
   select.addEventListener("change", () => show(select.value));
