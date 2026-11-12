@@ -59,7 +59,7 @@ script's `Input.mouse_mode` goes through it (phones can't lock the mouse). Rebui
 2. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe --title "ATEC <name>"`
 3. Add a line at the top of `VERSIONS` in `docs/index.html`, commit, push.
 (The site had a single ".pck" download button for a while on 2026-11-12; the user turned it back into the
-Mac and Windows buttons the same day. The releases still have an ATEC.pck each, unused.)
+Mac and Windows buttons the same day, and the ATEC.pck files were deleted from the releases again.)
 
 ## Versions (every update has a name)
 
