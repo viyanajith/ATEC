@@ -41,11 +41,28 @@ In the browser the render distance starts at 5 instead of 10 (`world.gd` WEB_REN
 The browser version is still **Beta 1.6** (user, 2026-11-12): 1.0 was released for Mac and Windows only, so
 `docs/play/` was not rebuilt and its button says Beta 1.6.
 
+## The phone version (`docs/mobile/`)
+
+Beta 1.6 with touch controls, behind the "📱 Play on your phone" button (user, 2026-11-12). The 1.6
+source was not kept, so it was RECOVERED from `docs/play/index.pck` with Godot RE Tools v2.7.4
+(`--recover`; all 90 scripts decompiled, comments are gone) into `~/atec-beta-1.6-mobile`, a
+separate project; the real game (`~/mc-clone-3d`) is 1.0 and was not touched.
+Added there: `script/ui/touch_controls.gd` (the "TouchControls" autoload: joystick, drag to look,
+MINE/USE/JUMP/SNEAK/INV/DROP/SWAP/'/'/pause, < > for the hotbar, Continue/Close in menus), and every
+script's `Input.mouse_mode` goes through it (phones can't lock the mouse). Rebuild:
+`Godot --headless --path ~/atec-beta-1.6-mobile --export-release "Web Mobile" ~/CivASEC_repo/docs/mobile/index.html`
+(its preset has the phone texture formats and the on-screen keyboard on).
+
 ## Releasing a new version
 
 1. Rebuild both files (above).
-2. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe --title "ATEC <name>"`
-3. Add a line at the top of `VERSIONS` in `docs/index.html`, commit, push.
+2. Take the game's `.pck` out of the Mac app (the website's only download button is the .pck, user
+   2026-11-12): mount `download_files/ATEC.dmg`, copy `ATEC.app/Contents/Resources/ATEC.pck` to
+   `download_files/ATEC.pck`.
+3. `gh release create <tag> download_files/ATEC.dmg download_files/ATEC.exe download_files/ATEC.pck --title "ATEC <name>"`
+4. Add a line at the top of `VERSIONS` in `docs/index.html` (with its `pck` size), commit, push.
+Players run a .pck with Godot 4.7: `Godot --main-pack ATEC.pck` (without `--main-pack` Godot opens
+its project list instead; the site's "How to play a .pck" guide says so).
 
 ## Versions (every update has a name)
 
