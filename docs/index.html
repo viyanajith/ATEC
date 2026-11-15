@@ -363,12 +363,17 @@
   // out) and how many times the browser and phone versions were opened.
   async function showCount() {
     const parts = [];
+    // GitHub answers only 60 times an hour per internet connection; when it says no, the
+    // last number this browser got is shown instead, so the line doesn't disappear.
+    let total = 0;
     try {
-      const releases = await (await fetch("https://api.github.com/repos/viyanajith/ATEC/releases?per_page=100")).json();
-      let total = 0;
-      for (const r of releases) for (const a of r.assets || []) total += a.download_count || 0;
-      if (total > 0) parts.push(`⬇ ${total.toLocaleString()} downloads`);
+      const res = await fetch("https://api.github.com/repos/viyanajith/ATEC/releases?per_page=100");
+      const releases = res.ok ? await res.json() : [];
+      if (Array.isArray(releases)) for (const r of releases) for (const a of r.assets || []) total += a.download_count || 0;
+      if (total > 0) try { localStorage.setItem("atec-downloads", String(total)); } catch (e) {}
     } catch (e) {}
+    if (total <= 0) try { total = +localStorage.getItem("atec-downloads") || 0; } catch (e) {}
+    if (total > 0) parts.push(`⬇ ${total.toLocaleString()} downloads`);
     let plays = 0;
     for (const key of ["play", "mobile"]) {
       try {
