@@ -70,6 +70,13 @@
   .next { width: 100%; font-size: 13px; color: var(--space); font-family: "Menlo", "Consolas", monospace; }
   .yt { display: inline-block; margin-top: 10px; padding: 8px 16px; border-radius: 8px; background: #ff0033; color: #fff; font-weight: 700; text-decoration: none; font-size: 15px; }
   .yt:hover { filter: brightness(1.12); }
+  .topbar { display: flex; justify-content: flex-end; }
+  .msglink {
+    display: inline-block; padding: 5px 14px; border-radius: 999px; font-size: 13px;
+    font-family: "Menlo", "Consolas", monospace; text-decoration: none;
+    color: var(--leaf); border: 1px solid var(--leaf); background: #8fdc6a14;
+  }
+  .msglink:hover { background: #8fdc6a33; }
   .count { margin: 14px 0 0; font-size: 13px; color: var(--dim); font-family: "Menlo", "Consolas", monospace; min-height: 1em; }
 
   .download {
@@ -181,6 +188,8 @@
 <body>
 <div class="wrap">
 
+  <div class="topbar"><a class="msglink" href="message/">✉ Send me a message</a></div>
+
   <header>
     <span class="logo">🌲</span>
     <p class="longname">Advanced Technological Electrical Civilization</p>
@@ -278,18 +287,6 @@
     </table>
   </section>
 
-  <section id="message">
-    <h2>&gt; send me a message</h2>
-    <form class="msg" id="msg-form">
-      <p>Played ATEC? Tell me what you liked, where you got stuck, or what I should add next. I read every message!</p>
-      <input name="name" maxlength="60" placeholder="Your name or nickname (optional)">
-      <textarea name="message" maxlength="2000" required placeholder="Your message"></textarea>
-      <input class="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-      <button type="submit">Send</button>
-      <p id="msg-status"></p>
-    </form>
-  </section>
-
   <footer>
     Made with <a href="https://godotengine.org">Godot 4.7</a> by Viyan ·
     <a href="https://github.com/viyanajith/ATEC">ATEC on GitHub</a> ·
@@ -383,34 +380,6 @@
     document.getElementById("count").textContent = parts.join("  ·  ");
   }
   showCount();
-
-  // Messages (Formspree): the form sends to Formspree, which emails them on. Only this ID is in
-  // the code, never the email address. Empty = the message section stays hidden.
-  const FORM_ID = "xkjroybv";
-  const form = document.getElementById("msg-form");
-  if (FORM_ID) {
-    form.style.display = "block";
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const status = document.getElementById("msg-status");
-      const button = form.querySelector("button");
-      button.disabled = true;
-      status.textContent = "Sending...";
-      try {
-        const r = await fetch(`https://formspree.io/f/${FORM_ID}`, {
-          method: "POST", body: new FormData(form), headers: { Accept: "application/json" },
-        });
-        if (!r.ok) throw new Error();
-        form.reset();
-        status.textContent = "Thanks! Your message was sent. 🚀";
-      } catch (e) {
-        status.textContent = "Sorry, it didn't send. Try again in a minute.";
-      }
-      button.disabled = false;
-    });
-  } else {
-    document.getElementById("message").style.display = "none";
-  }
 
   select.addEventListener("change", () => show(select.value));
   show(VERSIONS[0].tag);
